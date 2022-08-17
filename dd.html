@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	 <style type="text/css">
+	 	*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-size: 12px;
+		}
+		body{
+			background-color: #f4f4f4;
+			min-width: 1200px;
+		}
+		ul,li{
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+			color: #666;
+		}
+		span{
+			display: inline-block;
+		}
+		a:hover{
+			color:#e2231a ;
+		}
+		button:hover{
+			cursor: pointer;
+		}
+		.clear::after{
+			display: block;
+			content: '';
+			clear: both;
+		}
+		.w{
+			width: 1200px;
+			margin: 0 auto;
+		}
+		.left{
+			float: left;
+		}
+		.right{
+			float: right;
+		}
+		.nav{
+			height: 31px;
+			line-height: 31px;
+			font-size: 12px;
+			color: #999;
+		}
+		.nav>ul>li{
+			padding: 0 10px;
+			
+		}
+		.nav>ul>.sg{
+			height: 10px;
+			padding: 0;
+			border-left: 1px solid #999999;
+			margin-top: 10px;
+			
+		}
+		.nav>ul>li>img{
+			vertical-align: middle;
+		}
+		.nav>ul>li:hover{
+			cursor: pointer;
+			color: #f10215;
+		}
+		.nav>ul>li>span{
+			display: inline-block;
+			height: 10px;
+			border-left: 1px solid #999999;
+			
+		}
+		.nav2{
+			width: 100%;
+			height: 80px;
+			background-color: #e2231a;
+		}
+		.nav2>.w>.nav2_left{
+			line-height: normal;
+		}
+		.nav2>.w>.nav2_left button{
+			font-size: 12px;
+			margin-top: 6px;
+			background-color: #e2231a;
+			width: 94px;
+			height: 20px;
+			color: #ffb2b2;
+			border: 1px solid #ffb2b2;
+			border-radius: 20px;
+		}
+		.nav2>.w>.nav2_left button:hover{
+			cursor: pointer;
+			background-color: #FFFFFF;
+			color: #e2231a;
+		}
+		
+		.nav2_left1{
+			height: 80px;
+			line-height: 80px;
+			margin-left: 30px;
+			color: #FFFFFF;
+			font-size: 14px;
+		}
+		.nav2_left1>ul>li{
+			float: left;
+			padding: 0 20px;
+			cursor: pointer;
+		}
+		.nav2_left1>ul>li>img{
+			vertical-align: middle;
+			margin-left: 5px;
+		}
+		.nav2_right{
+			height: 80px;
+			margin-top: 25px;
+		}
+		.nav2_right>input{
+			border: none;
+			outline: none;
+			height: 32px;
+			padding-left: 3px;
+			width: 130px;
+		}
+		.nav2_right>button{
+			border: none;
+			font-size: 12px;
+		}
+		.nav2_right>button:nth-of-type(1){
+			margin-right: 15px;
+			width: 56px;
+			height: 32px;
+		}
+		.nav2_right>button:nth-of-type(2){
+			height: 32px;
+			width: 141px;
+			line-height: 32px;
+			position: relative;
+		}
+		.nav2_right>button:nth-of-type(2)>i{
+			display: inline-block;
+			font-style: normal;
+			width: 16px;
+			height: 14px;
+			background-color:#e2231a ;
+			line-height: normal;
+			color: #FFFFFF;
+			position: absolute;
+			border-radius: 50% 50% 50% 0;
+			top: -5px;
+		}
+		
+		/* 内容 */
+		.content1{
+			height: 30px;
+			line-height: 30px;
+			background-color: #FFFFFF;
+			color: #666;
+		}
+		.content2{
+			height: 50px;
+			line-height: 50px;
+			border-bottom: 3px solid #71b247;
+		}
+		.content3{
+			background-color: #FFFFFF;	
+		
+		}
+		.content3>div:nth-of-type(1){
+			width: 325px;
+			text-align: center;
+			padding: 20px 0;
+			border-right: 1px solid #eee;
+		}
+		.content3>div:nth-of-type(1)>p{
+			margin-bottom: 30px;
+			color: #999;
+		}
+		.content3>div:nth-of-type(1)>h3{
+			color: #71b247;
+			font-size: 24px;
+		}
+		.content3>div:nth-of-type(1)>div{
+			width: 100px;
+			height: 29px;
+			line-height: 29px;
+			margin: 0 auto;
+			margin-top: 20px;
+			border: 1px solid #ddd;
+			cursor: pointer;
+		}
+		.content3>div:nth-of-type(1)>div:hover{
+			color:#e4393c ;
+			border-color: #e4393c;
+		}
+		.content3>div:nth-of-type(2){
+			width: 860px;
+			height: 330px;
+			padding: 20px 0;
+		}
+		.content3>div:nth-of-type(2)>.jdt{
+			margin-top: 66px;
+		}
+		.content3>div:nth-of-type(2)>.jdt>ul>li{
+			float: left;
+			text-align: center;
+		}
+		.content4{
+			background-color: #FFFFFF;
+			margin-top: 25px;
+			height: 256px;
+		}
+		.content4>div{
+			padding: 30px 20px 20px;
+			width: 325px;
+			height: 100%;
+			border-right: 1px solid #eee;
+			
+		}
+		.content4>div>ul>li{
+			line-height: 25px;
+		}
+		.content5{
+			background-color: #FFFFFF;
+			margin-top: 20px;
+			border-top: 4px solid #eee;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+		.content5>ul>li{
+			padding: 0 30px;
+			width: 33%;
+			height: 288px;
+			border-right: 1px solid #eee;
+			float: left;
+		}
+		.content5>ul>li>h4{
+			height: 24px;
+			line-height: 24px;
+			color: #333;
+			font-size: 14px;
+			font-weight: 400;
+		}
+		.content5>ul>li>p{
+			height: 24px;
+			line-height: 24px;
+		}
+		.content6{
+			height: 34px;
+			line-height: 34px;
+			margin-top: 10px;
+		}
+		.content7{
+			
+		}
+		.content7>.content7_1{
+			height: 34px;
+			line-height: 34px;
+			background-color: #f9f9f9;
+		}
+		.content7>.content7_1>ul>li{
+			float: left;
+			width: 10%;
+			text-align: center;
+		}
+		.content7_2{
+			background-color: #FFFFFF;
+			border-bottom: 1px solid #eee;
+			padding-bottom: 17px;
+		}
+		.content7_2>ul>li{
+			padding-top: 17px;
+			float: left;
+			width: 10%;
+			text-align: center;
+		}
+		
+		.content7_2>ul>li p{
+			width: 420px;
+			padding-left: 80px;
+			line-height: 20px;
+		}
+		.content7_2>ul>li p:hover{
+			cursor: pointer;
+			color: #e4393c;
+		}
+		.content7_2>ul>li span{
+			margin-left: 15px;
+			margin-top: 5px;
+			color: #999;
+		}
+		.content7_2>ul>li>.wly{
+			color: #e4393c;
+			border: 1px solid #e4393c;
+			border-radius: 2px;
+			padding: 1px 2px;
+			display: inline-block;
+			margin-top: 10px;
+		}
+		.content7_3{
+			background-color: #FFFFFF;
+			padding: 20px;
+		}
+		.content7_3>div{
+			float: right;
+		}
+		.content7_3 p{
+			line-height: 28px;
+			text-align: right;
+		}
+		.content7_3 p:nth-of-type(4){
+			color: #e4393c;
+		}
+		
+		.footer{
+			height: 545px;
+			background-color: #eaeaea;
+			margin-top: 20px;
+		}
+		
+		.footer_1>ul{
+			padding: 30px 0 30px 55px;
+		}
+		.footer_1>ul>li{
+			font-size: 18px;
+			font-weight: 700;
+			float: left;
+			width: 25%;
+		}
+		.footer_2>ul{
+			padding: 30px 0 30px 55px;
+			float: left;
+			width: 20%;
+			
+		}
+		.footer_2>ul>li{
+			height: 22px;
+		}
+		.footer_2>ul>li:hover{
+			cursor: pointer;
+			color: #e4393c;
+		}
+		.footer_2>ul>li:nth-of-type(1){
+			color: #777;
+			font-size: 14px;
+			font-weight: 700;
+		}
+		.footer_3{
+			margin-top: 18px;
+		}
+		.footer_3>p{
+			text-align: center;
+			line-height: 22px;
+		}
+		.footer_3>p>a{
+			padding: 0 10px;
+		}
+	 </style>
+	<body>
+		<!-- 顶部 -->
+		<div class="nav w">
+			<ul>
+				<li class="left"><img src="./img/fz.png" alt="">京东首页</li>
+				<li class="left"><img src="./img/wz.png" alt="">北京</li>
+		
+				<li class="right">网站无障碍</li>
+				<li class="right sg"></li>
+				<li class="right">手机京东</li>
+				<li class="right sg"></li>
+				<li class="right">网站导航<img src="./img/jt.png" alt="">
+				</li>
+				<li class="right sg"></li>
+				<li class="right">客户服务<img src="./img/jt.png" alt="">
+				</li>
+				<li class="right sg"></li>
+				<li class="right">企业采购<img src="./img/jt.png" alt="">
+				</li>
+				<li class="right sg"></li>
+				<li class="right">京东会员</li>
+				<li class="right sg"></li>
+				<li class="right">我的京东<img src="./img/jt.png" alt="">
+				</li>
+				<li class="right sg"></li>
+				<li class="right">我的订单</li>
+				<li class="right sg"></li>
+				<li class="right">cys<img style="margin-left: 5px;" src="./img/plus.png" alt=""> </li>
+			</ul>
+		</div>
+		
+		<div class="nav2">
+			<div class="w">
+				<div class="nav2_left left">
+					<img  style="margin-top: 12px;" width="158px" class="left" src="./img/log1.png" alt="">
+					<div style="margin-top: 13px;margin-left: 10px;" class="left">
+						<p style="font-size: 20px;color: #FFFFFF;">我的京东</p>
+						<button  type="button">返回静动首页</button>
+					</div>
+				</div>
+				<div class="nav2_left1 left">
+					<ul>
+						<li>首页</li>
+						<li>账户设置<img src="./img/jt2.png" alt="">
+						</li>
+						<li>评价<img src="./img/jt2.png" alt="">
+						</li>
+					</ul>
+				</div>
+				<div class="nav2_right right">
+					<input class="left" type="text">
+					<button class="left" type="button">搜索</button>
+					<button class="left"  type="button">
+						<img style="vertical-align: middle;width: 25px;" src="./img/gwc.png" >
+						我的购物车<i>3</i>
+						<img style="vertical-align: middle;" src="./img/jt3.png" >
+					</button>
+				</div>
+			</div>
+		</div>
+	
+		<!-- 内容 -->
+		<div class="content">
+			<div class="content1">
+				<div class="w">
+					<img style="vertical-align: middle;" src="./img2/dd.png" >
+					<span>安全提醒：为了您的财产安全，<strong>不要点击陌生链接、不要向陌生人转账谨防诈</strong>或透漏银行卡和验证码信息，！</span>
+				</div>
+			</div>
+			<div class="content2 w">
+				<a href="">我的京东</a>&nbsp; > &nbsp;
+				<a href="">我的京东</a>&nbsp; > &nbsp;
+				<span>订单：241914766442</span>
+			</div>
+			<div class="content3 w clear">
+				<div class="left">
+					<p>订单号：241914766442</p>
+					<h3>完成</h3>
+					<div style="background-color: #f5f5f5;" >查看发票详情</div>
+					<div style="border: 1px solid #e4393c; color: #e4393c;">评价</div>
+					<span style="margin-top: 70px;" ><img style="vertical-align: middle;" src="./img2/dydd.png" >打印订单</span>
+				</div>
+				<div class="right">
+					<div style="color: #aaa;">订单已经完成，感谢您在京东商城购物，欢迎您对本次交易及所购商品进行评价。</div>
+					<div class="jdt clear">
+						<ul>
+							<li>
+								<img src="./img2/cd.png" alt="">
+								<p style="margin-top: 15px;">提交订单</p>
+								<p style="margin-top: 5px;">2022-04-05<br>10:06:10 </p>
+							</li>
+							<li>
+								<img style="margin-top: 5px;width: 120px;" src="./img2/jdt.png" >
+							</li>
+							<li>
+								<img src="./img2/cd.png" alt="">
+								<p style="margin-top: 15px;">提交订单</p>
+								<p style="margin-top: 5px;">2022-04-05<br>10:06:10 </p>
+							</li>
+							<li>
+								<img style="margin-top: 5px;width: 120px;" src="./img2/jdt.png" >
+							</li>
+							<li>
+								<img src="./img2/cd.png" alt="">
+								<p style="margin-top: 15px;">提交订单</p>
+								<p style="margin-top: 5px;">2022-04-05<br>10:06:10 </p>
+							</li>
+							<li>
+								<img style="margin-top: 5px;width: 120px;" src="./img2/jdt.png" >
+							</li>
+							<li>
+								<img src="./img2/cd.png" alt="">
+								<p style="margin-top: 15px;">提交订单</p>
+								<p style="margin-top: 5px;">2022-04-05<br>10:06:10 </p>
+							</li>
+							<li>
+								<img style="margin-top: 5px;width: 120px;" src="./img2/jdt.png" >
+							</li>
+							<li>
+								<img style="height: 43px;margin-top: -10px;" src="./img2/qs.png" alt="">
+								<p style="margin-top: 5px;">完成</p>
+								<p style="margin-top: 5px;">2022-04-05<br>10:06:10 </p>
+							</li>
+						</ul>
+					</div>
+					<div style="margin-top: 82px;">
+						<img style="vertical-align: middle;" src="./img2/jd.png" alt="">京豆<b style="color: #e4393c;">+6</b>
+					</div>
+				</div>
+			</div>
+			<div class="content4 w">
+				<div class="clear">
+					<img class="left" src="./img2/ej.jpg" >
+					<ul style="margin-left: 15px;" class="left">
+						<li>送货方式：京东快递</li>
+						<li>承运人：京东快递 <b style="color: #e4393c;">快递咨询</b></li>
+						<li>货运单号：JD0069199922910</li>
+					</ul>
+				</div>
+			</div>
+			<div class="content5 w">
+				<ul class="clear">
+					<li>
+						<h4>收货人信息</h4>
+						<p>收货人:<span style="width: 46px;"></span> 晁雨生</p>
+						<p>地址:<span style="width: 59px;"></span>北京昌平区城北街道松园小区</p>
+						<p>手机号码:<span style="width: 35px;"></span>156****8240</p>
+					</li>
+					<li>
+						<h4>收货人信息</h4>
+						<p>收货人:<span style="width: 46px;"></span> 晁雨生</p>
+						<p>地址:<span style="width: 59px;"></span>北京昌平区城北街道松园小区</p>
+						<p>手机号码:<span style="width: 35px;"></span>156****8240</p>
+					</li>
+					<li style="border: none;">
+						<h4>收货人信息</h4>
+						<p>收货人:<span style="width: 46px;"></span> 晁雨生</p>
+						<p>地址:<span style="width: 59px;"></span>北京昌平区城北街道松园小区</p>
+						<p>手机号码:<span style="width: 35px;"></span>156****8240</p>
+					</li>
+				</ul>
+			</div>
+			<div class="content6 w">
+				京东<img style="margin-left: 5px; vertical-align: middle;" src="./img2/xrt.png" alt="">
+			</div>
+			<div class="content7 w">
+				<div class="content7_1">
+					<ul class="clear">
+						<li style="width: 50%;">商品</li>
+						<li>商品编号</li>
+						<li>京东价</li>
+						<li>商品数量</li>
+						<li>京豆</li>
+						<li>操作</li>
+					</ul>
+				</div>
+				<div class="content7_2">
+					<ul class="clear">
+						<li style="width: 50%;text-align: left;padding-left: 17px;">
+							<div>
+								<img class="left" src="./img2/xrj.jpg" alt="">
+								<p>漫步者（EDIFIER）LolliPods 真无线蓝牙耳机 半入耳式耳机 萝莉Pods 通用苹果华为小米手机 黑色</p>
+								<span>【超级单品】LolliPods 黑色</span>
+							</div>
+							<div class="wly" >支持7天无理由退货</div>
+						</li>
+						<li>100009212476</li>
+						<li>¥148.00</li>
+						<li>1</li>
+						<li>6</li>
+						<li>
+							<h6 style="margin-top: 9px;">申请售后<h6/>
+							<button style="height: 25px; width: 87px;margin-top: 10px;">立即购买</button>
+						</li>
+					</ul>
+				</div>
+				<div class="content7_3 clear">
+					<div>
+						<p>商品总额：<span style="width: 100px;"></span>¥148.00</p>
+						<p>运费：<span style="width: 100px;"></span>+ ¥0.00</p>
+						<p>商品优惠：<span style="width: 100px;"></span>- ¥10.00</p>
+						<p>实付款：<span style="width: 100px;"></span><b style="font-size: 18px;font-weight: 700;">¥138.00</b></p>
+					</div>
+
+				</div>
+			</div>
+		
+		</div>
+		
+		<!-- 尾部 -->
+		<div class="footer">
+			<div class="w">
+				<div class="footer_1">
+					<ul class="clear">
+						<li>
+							<img style="vertical-align: middle;" src="./img2/duo.png" >
+							品类齐全，轻松购物
+						</li>
+						<li>
+							<img style="vertical-align: middle;" src="./img2/duo.png" >
+							品类齐全，轻松购物
+						</li>
+						<li>
+							<img style="vertical-align: middle;" src="./img2/duo.png" >
+							品类齐全，轻松购物
+						</li>
+						<li>
+							<img style="vertical-align: middle;" src="./img2/duo.png" >
+							品类齐全，轻松购物
+						</li>
+					</ul>
+				</div>
+				
+				<div class="footer_2 clear">
+					<ul>
+						<li>购物指南</li>
+						<li style="margin-top: 6px;">购物流程</li>
+						<li>会员介绍</li>
+						<li>生活旅行/团购</li>
+						<li>联系客服</li>
+					</ul>
+					<ul>
+						<li>购物指南</li>
+						<li style="margin-top: 6px;">购物流程</li>
+						<li>会员介绍</li>
+						<li>生活旅行/团购</li>
+						<li>联系客服</li>
+					</ul>
+					<ul>
+						<li>购物指南</li>
+						<li style="margin-top: 6px;">购物流程</li>
+						<li>会员介绍</li>
+						<li>生活旅行/团购</li>
+						<li>联系客服</li>
+					</ul>
+					<ul>
+						<li>购物指南</li>
+						<li style="margin-top: 6px;">购物流程</li>
+						<li>会员介绍</li>
+						<li>生活旅行/团购</li>
+						<li>联系客服</li>
+					</ul>
+					<ul>
+						<li>购物指南</li>
+						<li style="margin-top: 6px;">购物流程</li>
+						<li>会员介绍</li>
+						<li>生活旅行/团购</li>
+						<li>联系客服</li>
+					</ul>
+				</div>
+				
+				<div class="footer_3">
+					<p><a href="">关于我们</a> | <a href="">联系我们</a>| <a href="">联系客服</a>| <a href="">合作招商</a>| <a href="">商家帮助</a>| <a href="">营销中心</a>| <a href="">手机京东</a>| <a href="">友情链接</a>| <a href="">销售联盟</a>| <a href="">京东社区</a>| <a href="">风险监测</a>| <a href="">隐私政策</a>| <a href="">京东公益</a>| <a href="">English Site</a>| <a href="">Media & IR</a></p>
+					<p style="padding: 10px 0;">
+						<a href="">京公网安备 11000002000088号</a> | <a href="">京ICP备11041704号</a>| <a href=""> ICP</a>|<a href="">  互联网药品信息服务资格证编号(京)-经营性-2014-0008</a>|<a href="">新出发京零 字第大120007号</a><br>
+						<a href="">京公网安备 11000002000088号</a> | <a href="">京ICP备11041704号</a>| <a href=""> 网络文化经营许可证京网文[2020]6112-1201号</a><br>
+						<a href=""><img style="vertical-align: middle;" src="./img2/qiu.png" alt="">globol site</a> |<a href=""><img style="vertical-align: middle;" src="./img2/qiu.png" alt="">globol site</a> |<a href=""><img style="vertical-align: middle;" src="./img2/qiu.png" alt="">globol site</a> |<a href=""><img style="vertical-align: middle;" src="./img2/qiu.png" alt="">globol site</a><br>
+						<a href="">京东旗下网站： 京东钱包</a> |<a href=""> 京东云</a>
+					</p>
+					<p>
+						<a  href=""><img style="width: 103px;height: 32px;" src="./img2/xy.png" ></a>
+						<a  href=""><img style="width: 103px;height: 32px;" src="./img2/xy.png" ></a>
+						<a  href=""><img style="width: 103px;height: 32px;" src="./img2/xy.png" ></a>
+						<a  href=""><img style="width: 103px;height: 32px;" src="./img2/xy.png" ></a>
+						<a  href=""><img style="width: 103px;height: 32px;" src="./img2/xy.png" ></a>
+						<a  href=""><img style="width: 103px;height: 32px;" src="./img2/xy.png" ></a>
+					</p>
+				</div>
+			</div>	
+		</div>
+		
+		<!-- <div style="height: 500px;"></div> -->
+	</body>
+</html>
